@@ -37,4 +37,4 @@ Hoàn thành thay đổi trong phạm vi người dùng yêu cầu. Giải thíc
 
 Sau thay đổi mã nguồn, chạy `npm run build` (đã bao gồm Astro check). Khi đổi giao diện/tương tác, kiểm tra bản desktop, mobile, dark mode, nút mưa và điều hướng. Không cần tạo test chỉ để sao chép một thay đổi văn bản/CSS nhỏ. Không coi build thành công là đã publish.
 
-Người dùng đã đồng ý tiến tới bước tiếp theo; đang chuẩn bị publish GitHub Pages, chờ chọn địa chỉ/repository. Dùng `docs/DEPLOYMENT.md` cho quy trình. `docs/PROFILE.md` chỉ lưu cục bộ, được gitignore; không đẩy ghi chú CV này lên repository public. Không tự chọn domain hoặc dịch vụ trả phí.
+Người dùng đã chọn publish website cá nhân chính qua GitHub Pages: repository public `duydev02/duydev02.github.io`, địa chỉ `https://duydev02.github.io/`. Workflow trong `.github/workflows/deploy.yml` tự kiểm tra, build và deploy khi push `main`; URL/base lấy từ cấu hình Pages. Dùng `docs/DEPLOYMENT.md` cho quy trình. `docs/PROFILE.md` chỉ lưu cục bộ, được gitignore; không đẩy ghi chú CV này lên repository public. Không tự chọn domain hoặc dịch vụ trả phí.

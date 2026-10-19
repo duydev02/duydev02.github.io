@@ -27,9 +27,9 @@
 
 - [x] Chuẩn bị workflow GitHub Actions với Node 24, kiểm tra và build tự động theo địa chỉ Pages.
 - [x] Giữ ghi chú hồ sơ CV cục bộ, ảnh gốc và dữ liệu môi trường ngoài repository.
-- [ ] Chọn repository GitHub cho website, không ghi đè trang cũ.
-- [ ] Đặt SITE_URL/SITE_BASE đúng địa chỉ đã chọn.
-- [ ] Build, kiểm tra đường dẫn, ảnh chia sẻ và giao diện điện thoại.
+- [x] Chọn repository GitHub `duydev02/duydev02.github.io` cho website, không ghi đè trang cũ.
+- [x] Đặt SITE_URL/SITE_BASE tự động theo Pages; địa chỉ chính `https://duydev02.github.io/`.
+- [x] Build, kiểm tra đường dẫn, metadata, ảnh chia sẻ và giao diện điện thoại.
 - [ ] Bật GitHub Pages và publish lần đầu.
 - [ ] Chọn/mua domain khi đã thích tên, rồi cấu hình DNS và HTTPS.
 

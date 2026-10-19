@@ -2,6 +2,8 @@
 
 Website cá nhân dựa trên **Astro Nano**: gọn, dễ đọc, có một chút mây và mưa. Mục tiêu là vừa có một góc riêng để chia sẻ, vừa học cách hiểu, chỉnh sửa và vận hành một website cùng AI.
 
+Địa chỉ website: **https://duydev02.github.io/** · [Trạng thái publish](https://github.com/duydev02/duydev02.github.io/actions/workflows/deploy.yml)
+
 ## Chạy ở máy mình
 
 Dùng Node.js 24 (xem `.nvmrc`) và npm.

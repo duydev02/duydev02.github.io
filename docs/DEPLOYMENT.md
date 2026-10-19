@@ -1,6 +1,6 @@
 # Đưa góc nhỏ lên mạng
 
-Đã chuẩn bị workflow `.github/workflows/deploy.yml` cho lần publish đầu tiên lên GitHub Pages. Địa chỉ/repository đang chờ người dùng chọn. Không có domain hoặc dịch vụ trả phí được tạo.
+Website dùng GitHub Pages tại **https://duydev02.github.io/**, mã nguồn trong repository public [duydev02/duydev02.github.io](https://github.com/duydev02/duydev02.github.io). Pages được cấu hình dùng GitHub Actions và HTTPS. Xem [lịch sử publish](https://github.com/duydev02/duydev02.github.io/actions/workflows/deploy.yml) để biết lần triển khai gần nhất. Không có domain hoặc dịch vụ trả phí được tạo.
 
 ## 1. Kiểm tra bản build
 
@@ -35,7 +35,7 @@ SITE_URL=https://duydev02.github.io SITE_BASE=/portfolio npm run preview
 
 ## 3. GitHub Pages
 
-Tạo repository public mới: `duydev02.github.io` cho website cá nhân chính, hoặc `portfolio` cho địa chỉ có `/portfolio/`. Không ghi đè repository `motchutdangyeu` đang có.
+Đã chọn repository `duydev02.github.io` cho website cá nhân chính, tương ứng `SITE_URL=https://duydev02.github.io` và `SITE_BASE=/`. Repository `motchutdangyeu` tiếp tục hoạt động riêng.
 
 Trong repository, chọn **Settings → Pages → Source: GitHub Actions**, hoặc cấu hình Pages qua GitHub API với `build_type: workflow`. Sau đó push nhánh `main`; có thể chạy lại thủ công trong tab Actions.
 
