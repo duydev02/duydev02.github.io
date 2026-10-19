@@ -30,7 +30,7 @@
 - [x] Chọn repository GitHub `duydev02/duydev02.github.io` cho website, không ghi đè trang cũ.
 - [x] Đặt SITE_URL/SITE_BASE tự động theo Pages; địa chỉ chính `https://duydev02.github.io/`.
 - [x] Build, kiểm tra đường dẫn, metadata, ảnh chia sẻ và giao diện điện thoại.
-- [ ] Bật GitHub Pages và publish lần đầu.
+- [x] Bật GitHub Pages và publish lần đầu ngày 2026-10-20; kiểm tra HTTPS, trang dự án/bài viết, ảnh, metadata, mưa và custom 404 trên bản online.
 - [ ] Chọn/mua domain khi đã thích tên, rồi cấu hình DNS và HTTPS.
 
 ## Khi có nhu cầu thật

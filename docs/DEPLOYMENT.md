@@ -2,6 +2,8 @@
 
 Website dùng GitHub Pages tại **https://duydev02.github.io/**, mã nguồn trong repository public [duydev02/duydev02.github.io](https://github.com/duydev02/duydev02.github.io). Pages được cấu hình dùng GitHub Actions và HTTPS. Xem [lịch sử publish](https://github.com/duydev02/duydev02.github.io/actions/workflows/deploy.yml) để biết lần triển khai gần nhất. Không có domain hoặc dịch vụ trả phí được tạo.
 
+Lần publish đầu tiên thành công ngày **2026-10-20**: [workflow 39293777640](https://github.com/duydev02/duydev02.github.io/actions/runs/39293777640). Đã kiểm tra 13 đường dẫn online, ba ảnh trong trang chủ, canonical và custom 404 qua HTTPS; mưa giữ trạng thái khi điều hướng. Commit chỉ cập nhật tài liệu có thể dùng `[skip ci]` trong thông điệp để tránh deploy lại khi website không đổi.
+
 ## 1. Kiểm tra bản build
 
 ```sh
