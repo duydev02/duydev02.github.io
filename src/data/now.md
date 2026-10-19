@@ -1,0 +1,3 @@
+- **Spring Boot & một dự án Identity/Authentication.** Mình đang xây dựng dự án cá nhân để học thêm về backend và cách thiết kế API. Vẫn đang tìm hiểu, vẫn còn nhiều thứ để thử.
+- **Một môi trường làm việc gọn hơn.** Dùng Docker cho môi trường database, thử remote development và tìm cách tự động hóa những thao tác lặp lại.
+- **Tiếng Anh cũng đang học tiếp.** TOEIC 685; mình muốn cải thiện thêm phần nghe và nói để giao tiếp thoải mái hơn.

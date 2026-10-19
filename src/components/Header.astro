@@ -1,0 +1,20 @@
+---
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+---
+<header>
+  <Container>
+    <div class="site-nav">
+      <Link href="/" underline={false} aria-label="Duy — về trang chủ">
+        <span class="wordmark">duy<span class="accent">.</span></span>
+      </Link>
+      <nav aria-label="Đi đâu nhỉ?">
+        <Link href="/#doi-dieu">đôi điều</Link>
+        <span aria-hidden="true">/</span>
+        <Link href="/projects/">nghịch</Link>
+        <span aria-hidden="true">/</span>
+        <Link href="/blog/">ghi chép</Link>
+      </nav>
+    </div>
+  </Container>
+</header>

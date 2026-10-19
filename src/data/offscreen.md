@@ -1,0 +1,4 @@
+- **Ra ngoài một chút.** Chơi cầu lông, tập gym, hoặc đi cà phê thư giãn vào cuối tuần.
+- **Ở nhà một chút.** Đọc tiểu thuyết, chơi League of Legends và theo dõi Esports.
+- **Trong tai nghe.** R&B, Indie, Pop; có Grey D và Wave to Earth.
+- **Đã đọc qua.** *Không gia đình*, *Rừng Na Uy* và *Nhà giả kim*.

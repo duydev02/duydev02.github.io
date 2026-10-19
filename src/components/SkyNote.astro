@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import sunset from "../assets/sky-sunset.webp";
+import blueSky from "../assets/sky-blue-flowers.webp";
+---
+<figure class="sky-note" data-sky-note>
+  <div class="sky-photos">
+    <a href={sunset.src} target="_blank" rel="noopener" aria-label="Mở ảnh hoàng hôn lớn trong tab mới">
+      <Image src={sunset} widths={[240, 480, 720]} sizes="(max-width: 640px) calc((100vw - 50px) / 2), 295px" alt="Mây cam rực lúc hoàng hôn trên sông, phía xa là những mái nhà" />
+    </a>
+    <a href={blueSky.src} target="_blank" rel="noopener" aria-label="Mở ảnh trời xanh lớn trong tab mới">
+      <Image src={blueSky} widths={[240, 480, 720]} sizes="(max-width: 640px) calc((100vw - 50px) / 2), 295px" alt="Hoa sứ trắng và tán lá dưới bầu trời xanh, bên một tòa nhà màu hồng" />
+    </a>
+  </div>
+  <figcaption>
+    <span><span class="caption-dot" aria-hidden="true"></span><span data-sky-status aria-live="polite">Hai khoảng trời mình thích.</span></span>
+    <button type="button" class="rain-toggle" aria-label="Bật mưa toàn trang" aria-controls="page-rain" aria-pressed="false" data-rain-toggle="inline" hidden>cho mưa chút đi ☂</button>
+  </figcaption>
+</figure>

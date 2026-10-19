@@ -1,0 +1,23 @@
+<canvas
+  id="page-rain"
+  class="page-rain"
+  aria-hidden="true"
+  transition:persist="page-rain"
+  hidden
+></canvas>
+<button
+  type="button"
+  class="weather-control"
+  data-rain-toggle="floating"
+  aria-label="Bật mưa toàn trang"
+  aria-controls="page-rain"
+  aria-pressed="false"
+  hidden
+>cho mưa chút đi ☂</button>
+
+<script>
+  import { initRain } from "@lib/rain";
+
+  const cleanup = initRain();
+  if (import.meta.hot) import.meta.hot.dispose(cleanup);
+</script>

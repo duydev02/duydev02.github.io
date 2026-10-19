@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import portrait from "../assets/duy-vung-tau.webp";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import SkyNote from "@components/SkyNote.astro";
+import { Content as About } from "../data/about.md";
+import { Content as Now } from "../data/now.md";
+import { Content as Offscreen } from "../data/offscreen.md";
+import { SITE, HOME, SOCIALS } from "@consts";
+
+const blog = (await getCollection("blog"))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+const projects = (await getCollection("projects"))
+  .filter(project => !project.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf() || a.id.localeCompare(b.id))
+  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+---
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <section class="intro" aria-labelledby="hello">
+      <p class="eyebrow"><span class="little-dot" aria-hidden="true"></span> MỘT GÓC NHỎ TRÊN INTERNET</p>
+      <div class="intro-heading">
+        <h1 id="hello">Chào, mình là Duy<span class="wave" aria-hidden="true"> ✳</span></h1>
+        <div class="portrait">
+          <Image src={portrait} width={160} height={160} densities={[1, 2]} alt="Ảnh chân dung Duy" loading="eager" />
+        </div>
+      </div>
+      <p class="intro-copy">Một dev có kinh nghiệm Java/backend,<br class="desktop-break" /> thích ngắm trời và nghe mưa.</p>
+      <p class="intro-aside">Một góc nhỏ từ TP. Hồ Chí Minh.<br />Vài thứ mình làm, vài điều mình học.</p>
+      <SkyNote />
+    </section>
+    <div class="home-sections">
+      <section id="doi-dieu" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title">Đôi điều về mình</h2><span class="margin-note">01 / đôi điều</span></div>
+        <article class="about-copy"><About /></article>
+        <p class="small-note">Java · Oracle · SQL · Git · Docker · vẫn đang học tiếp</p>
+      </section>
+      <section aria-labelledby="now-title">
+        <div class="section-heading"><h2 id="now-title">Dạo này đang mày mò</h2><span class="margin-note">chưa xong, vẫn vui</span></div>
+        <article class="now-copy"><Now /></article>
+      </section>
+      <section aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">Mấy thứ mình nghịch</h2><Link href="/projects/">xem hết ↗</Link></div>
+        <ul class="entry-list">{projects.map(project => <li><ArrowCard entry={project} /></li>)}</ul>
+      </section>
+      <section aria-labelledby="notes-title">
+        <div class="section-heading"><h2 id="notes-title">Ghi lại một chút</h2><Link href="/blog/">các ghi chép ↗</Link></div>
+        <ul class="entry-list">{blog.map(post => <li><ArrowCard entry={post} /></li>)}</ul>
+      </section>
+      <section aria-labelledby="offscreen-title">
+        <div class="section-heading"><h2 id="offscreen-title">Lúc không gõ code</h2><span class="margin-note">còn nhiều thứ khác</span></div>
+        <article class="offscreen-copy"><Offscreen /></article>
+      </section>
+      <section class="say-hello" aria-labelledby="hello-title">
+        <h2 id="hello-title">Ghé chơi thì chào một tiếng.</h2>
+        <p>Bạn có thể tìm thấy mình và mấy thứ đang làm ở đây:</p>
+        <div class="social-links">{SOCIALS.map(social => <Link href={social.HREF} external>{social.NAME} ↗</Link>)}{SITE.EMAIL && <Link href={`mailto:${SITE.EMAIL}`}>Email ↗</Link>}</div>
+      </section>
+    </div>
+  </Container>
+</PageLayout>
